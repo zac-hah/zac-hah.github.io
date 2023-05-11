@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zac Hah</title>
+    <style>
+        @font-face { font-family: NATS; src:url('../NATS.ttf');}
+        @font-face { font-family: NotoBlack; src:url('../NotoSansMono-Black.ttf');}
+        @font-face { font-family: Noto; src:url('../NotoSansMono-Regular.ttf');}
+        @font-face { font-family: NotoLight; src:url('../NotoSansMono-Light.ttf');}
+        h1{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; text-align: center;}
+        h2{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:7%;}
+        h4{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%;}
+        p{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%; margin-right: 5%;}
+        li{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%;}
+        .bigboy {
+            border: 1px outset #c1c7cd;
+            border-style:none solid none solid;
+            width: 50%;
+            margin:auto;
+            text-align: left;
+            vertical-align: top;
+            box-shadow: 0px 0px 15px;
+        }
+        a:link {
+            color:#d9fbfb;
+        }
+        a:visited {
+            color:#9ef0f0;
+        }
+        a:hover {
+            color:white;
+        }
+        table, th, td {
+            margin-left: 12%;
+            width:75%;
+            font-family: 'Courier New', Courier, monospace;
+            color:#d9fbfb;
+            padding: 8px;
+            /* border: 1px solid #dddddd; */
+        }
+    </style>
+</head>
+
+<body style="background:#081a1c">
+    <div class="bigboy">
+        <div style="position: relative;">
+            <h1 style="position: absolute;
+                        top: 0;
+                        left: 10%;
+                        font-size: 75px;">
+                blogs/projects
+            </h1>
+            <a href="../index.html"><img src="../img/antlia.jpg" width="100%" style="margin:auto; max-height:200px; object-fit: cover; opacity: 0.5; box-shadow: 0px 5px 5px black;"></a>
+        </div>
+        <h1>Hall Effect Sensor</h1>
+        <p><i>09/05/2023</i></p>
+        <p>
+            This week, over a couple of hours, I designed a simple hall effect sensor board that can be used as a magnetic limit switch
+            for robots.
+        </p>
+        <img src="../img/hall-effect.png" style="display: block; margin-left: auto; margin-right: auto;">
+        <p>
+            It's a nice and simple project that would be great as a tutorial for beginners getting into PCB design, so I also wrote a 
+            <a href="https://guard-gc.atlassian.net/l/cp/TB84TqMX">tutorial</a> for my robotics team's Confluence site, going over the 
+            process from part selection, to schematic, to layout.
+            <br><br>
+            I also checked out how much it would cost to make on JLCPCB. At $5~$10 per board it's comparable to buying one off the shelf 
+            from the regular robotics vendors (if they're in stock).
+        </p>
+
+        <h1>GS-6X Differential Swerve</h1>
+        <p><i>04/05/2023</i></p>
+        <p>
+           I worked on this from early March to late April, in preparation for the 2023 VEX World Championship in Dallas, TX.
+        </p>
+        <img src="../img/IMG_2425.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        <p>
+            <i>3D renders are nice, but I always feel more authentic with photos of real hardware.</i>
+        </p>
+        <p>
+            The name GS-6X implies it's the 6-and-a-half(th) iteration of the GUARD swerve module. It's been a long journey I've been working at since March of 2022,
+            and it still isn't really over.
+            <br><br>
+            This particular version mitigated some of the problems in the previous version, GS-5, which we used at the Australian Nationals competition. GS-5 had
+            a big problem putting enough torque down since the 3D printed ring gears would expand and slip, even when just driving on foam tiles. It also had a lot of backlash
+            between the wheel and the motors, which wouldn't have helped our autonomous routine (if we had one).
+            <br><br>
+            The solution was to use bevel gears for the differential. This reduced the number of gears, helping backlash, and forced the radial forces against the groove
+            that the ring gears sit in, so they could not come out of engagement. This worked well enough, and got us a robot that could drive in all directions.
+            <br><br>
+            Unfortunately the point of the differential swerve drive is that you have full power utilisation, but because the ring gears just sat in grooves full of grease
+            (rather than rolling element bearings) the efficiency was on the order of 60%. With only 11W per motor (88W total), it made the performance suffer, and we had 
+            to drop the RPMs by a third to stop the motors from overheating just from driving.
+        </p>
+        <img src="../img/trickshotand.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        <h2>What I've learned</h2>
+        <h4>Getting help</h4>
+        <p>
+            Probably the most valuable lesson I've learned is how helpful it is to have multiple people helping you solve a problem. The value of taking the time to educate
+            and involve other people in your project is double the effort you put in. I don't think the robot would have driven if not for the help of my team members.
+        </p>
+        <h4>Efficiency</h4>
+        <p>
+            In any competition, like racing or robotics, you're often limited to a certain amount of money you can spend or the amount of power your motors can output.
+            With that constraint, your goal should be tp get as much out of your resources as you can.
+            <br><br>
+            I'm not upset about the outcome of the GS-6X. It got the robot to move, and most importantly it taught us about efficiency. Given that we designed something that
+            was almost entirely 3D printed and very low cost, we've found where the tradeoffs between cost and performance really demand some more investment. We also know 
+            what we can get away with if we are designing something that doesn't need as much efficiency.
+            <br><br>
+            The next step will be to design a fully rolling-element module (with a target of say 85% efficiency), and I plan to do this as a collaborative and educational
+            opportunity so new members can get some interesting work on their plate.
+        </p>
+        <br>
+        <hr>
+        <p style="font-family:NotoLight;">
+            Zac Hah 2023
+        </p>
+        <br>
+    </div>
+</body>
+
+</html>

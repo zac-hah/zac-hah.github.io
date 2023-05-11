@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zac Hah</title>
+    <style>
+        @font-face { font-family: NATS; src:url('../NATS.ttf');}
+        @font-face { font-family: NotoBlack; src:url('../NotoSansMono-Black.ttf');}
+        @font-face { font-family: Noto; src:url('../NotoSansMono-Regular.ttf');}
+        @font-face { font-family: NotoLight; src:url('../NotoSansMono-Light.ttf');}
+        h1{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; text-align: center;}
+        h2{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:7%;}
+        h4{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%;}
+        p{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%; margin-right: 5%;}
+        li{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%;}
+        .bigboy {
+            border: 1px outset #c1c7cd;
+            border-style:none solid none solid;
+            width: 50%;
+            margin:auto;
+            text-align: left;
+            vertical-align: top;
+            box-shadow: 0px 0px 15px;
+        }
+        a:link {
+            color:#d9fbfb;
+        }
+        a:visited {
+            color:#9ef0f0;
+        }
+        a:hover {
+            color:white;
+        }
+        table, th, td {
+            margin-left: 12%;
+            width:75%;
+            font-family: 'Courier New', Courier, monospace;
+            color:#d9fbfb;
+            padding: 8px;
+            /* border: 1px solid #dddddd; */
+        }
+    </style>
+</head>
+
+<body style="background:#081a1c">
+    <div class="bigboy">
+        <div style="position: relative;">
+            <h1 style="position: absolute;
+                        top: 0;
+                        left: 10%;
+                        font-size: 75px;">
+                blogs/linux
+            </h1>
+            <a href="../index.html"><img src="../img/screenshot.png" width="100%" style="margin:auto; max-height:200px; object-fit: cover; opacity: 0.5; box-shadow: 0px 5px 5px black;"></a>
+        </div>
+        <h1>Raspberry Pi Hardware Video Encoding</h1>
+        <p><i>11/05/2023</i></p>
+        <p>Trying to find out how to use the hardware h264 encoder in the Raspberry Pi chips has been such a struggle. There's a lot of information to dig through,
+            most of it confusing and often conflicting.
+            <br><br>
+            Or, if you just want to copy a stream which is __already__ encoded, it's a similar story.
+            <br><br>
+            If you search anything like `opencv raw dump` or `ffmpeg omx` you'll struggle to find anything helpful. Only when I searched for `pi zero csi ffmpeg` did I
+            find my answer. Here it is:
+            <br><br>
+            <a href="https://gist.github.com/moritzmhmk/48e5ed9c4baa5557422f16983900ca95">`ffmpeg -f v4l2 -input_format h264 -video_size 1920x1080 -framerate 25 -i /dev/video0 -vcodec copy -an test.h264`</a>
+            <br><br>
+            With that code we can stream 1080p at 25 FPS to a .h264 file on a Pi Zero 2(!), and you just need to remux the file into the .mp4 container.
+            Although the code I stole is specifically about CSI, this should also work on USB cameras that do hardware encoding.
+            <br><br>
+            So if you've struggled like I have, there's how you do it.
+        </p>
+        <h1>Helpful Commands</h1>
+        <p><i>27/09/2022</i></p>
+        <p>Some helpful Linux commands I'm safekeeping here.</p>
+        <h2>ps -fA | grep "command"</h2>
+        <p>	Reports a snapshot of current processes. Helpful for finding python processes, for example.</p>
+        <h2>scp from.txt pi@ipaddress.local:/to.txt</h2>
+        <p>Copy over SSH.</p>
+        <h2>crontab -e</h2>
+        <p>Avoid doing crontab -r. :(</p>
+        <h2>shrink a disk image</h2>
+        <p>https://askubuntu.com/questions/1174487/re-size-the-img-for-smaller-sd-card-how-to-shrink-a-bootable-sd-card-image</p>
+        <br>
+        <hr>
+        <p style="font-family:NotoLight;">
+            Zac Hah 2023
+        </p>
+        <br>
+    </div>
+</body>
+
+</html>
