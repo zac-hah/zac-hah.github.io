@@ -53,6 +53,43 @@
             </h1>
             <a href="../index.html"><img src="../img/antlia.jpg" width="100%" style="margin:auto; max-height:200px; object-fit: cover; opacity: 0.5; box-shadow: 0px 5px 5px black;"></a>
         </div>
+
+        <h1>Inductive Resolver</h1>
+        <p><i>15/01/2024</i></p>
+        <p>
+            PCBWay have completed the order for the resolver boards, and have shipped them.
+        </p>
+        <img src="../img/IMG_3253.png" style="display: block; margin-left: auto; margin-right: auto;">
+        
+        <h1>Inductive Resolver</h1>
+        <p><i>20/12/2023</i></p>
+        <p>
+            Since the 31st of October, I've been working away at a more accurate way for swerve drive robots to utilise odometry. Typically, 
+            since swerve modules need to rotate continuously, rotation sensors aren't placed on the drive wheel. This can either be done
+            with a slip ring to power, and pass signals to, an encoder, or to perhaps have a coaxial optical encoder with a marked pattern
+            on the wheel.
+            <br><br>
+            I've chosen to design a low profile (&lt;10mm) rotary sensor that can be placed in the wheel well of a swerve module with a small,
+            low cost slip ring to pass CAN signals between each module and a control unit. The advantage of the PCB based inductive resolver
+            is the thin packaging, resistance to stray magnetic fields, and absolute rotation sensing that makes it useful for many applications.
+            To see an industrial application for swerve modules, see the Boston Dynamics robot, 
+            <a href="https://youtu.be/qgGH6Vk8nY8?si=S_H3dTJ_RoDZ4oMx">Stretch</a>.
+            <br><br>
+            I have completed the EDA design for the sensor board, and have contracted PCBWay to manufacture ten samples.
+        </p>
+        <img src="../img/rose_cad_front.png" style="display: block; margin-left: auto; margin-right: auto;">
+        <p>
+            Front side of board, showing TX coil pattern, STM32G431 MCU, analog front-end and inductive IC, status LEDs, debugging pins, poke-home
+            connectors, and TVS diode.
+        </p>
+        <img src="../img/rose_cad_back.png" style="display: block; margin-left: auto; margin-right: auto;">
+        <p>
+            Rear of board, showing RX antenna pattern on silkscreen, CAN transciever, crystal oscillator, LDO, and TVS diodes.
+            <br><br>
+            Once the boards arrive, I hope to demonstrate them on the VEX U robots at the World Championships in April and make them available
+            for other teams to purchase and use.
+        </p>
+        
         <h1>Hall Effect Sensor</h1>
         <p><i>09/05/2023</i></p>
         <p>
