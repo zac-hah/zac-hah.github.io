@@ -1,0 +1,39 @@
+@font-face { font-family: NATS; src:url('../NATS.ttf');}
+@font-face { font-family: NotoBlack; src:url('../NotoSansMono-Black.ttf');}
+@font-face { font-family: Noto; src:url('../NotoSansMono-Regular.ttf');}
+@font-face { font-family: NotoLight; src:url('../NotoSansMono-Light.ttf');}
+
+h1{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; text-align: center;}
+h2{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:7%;}
+h4{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%;}
+p{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%; margin-right: 5%;}
+li{font-family: 'Courier New', Courier, monospace; color:#d9fbfb; margin-left:5%;}
+.bigboy {
+    border: 1px outset #c1c7cd;
+    border-style:none solid none solid;
+    max-width: 960px;
+    margin:auto;
+    text-align: left;
+    vertical-align: top;
+    box-shadow: 0px 0px 15px;
+}
+.footer {
+    font-family: 'NotoLight', monospace;
+}
+a:link {
+    color:#d9fbfb;
+}
+a:visited {
+    color:#9ef0f0;
+}
+a:hover {
+    color:white;
+}
+table, th, td {
+    margin-left: 12%;
+    width:75%;
+    font-family: 'Courier New', Courier, monospace;
+    color:#d9fbfb;
+    padding: 8px;
+    /* border: 1px solid #dddddd; */
+}
