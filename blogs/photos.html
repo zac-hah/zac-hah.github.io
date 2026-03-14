@@ -15,36 +15,37 @@
                         font-size: 75px;">
                 blogs/photos
             </h1>
-            <a href="../index.html"><img src="../img/screenshot.png" width="100%" style="margin:auto; max-height:200px; object-fit: cover; opacity: 0.5; box-shadow: 0px 5px 5px black;"></a>
+            <a href="../index.html"><img src="../img/photography/jan26/4.jpg" width="100%" style="margin:auto; max-height:200px; object-fit: cover; opacity: 0.5; box-shadow: 0px 5px 5px black;"></a>
         </div>
-        <h1>Raspberry Pi Hardware Video Encoding</h1>
-        <p><i>11/05/2023</i></p>
-        <p>Trying to find out how to use the hardware h264 encoder in the Raspberry Pi chips has been such a struggle. There's a lot of information to dig through,
-            most of it confusing and often conflicting.
-            <br><br>
-            Or, if you just want to copy a stream which is __already__ encoded, it's a similar story.
-            <br><br>
-            If you search anything like `opencv raw dump` or `ffmpeg omx` you'll struggle to find anything helpful. Only when I searched for `pi zero csi ffmpeg` did I
-            find my answer. Here it is:
-            <br><br>
-            <a href="https://gist.github.com/moritzmhmk/48e5ed9c4baa5557422f16983900ca95">`ffmpeg -f v4l2 -input_format h264 -video_size 1920x1080 -framerate 25 -i /dev/video0 -vcodec copy -an test.h264`</a>
-            <br><br>
-            With that code we can stream 1080p at 25 FPS to a .h264 file on a Pi Zero 2(!), and you just need to remux the file into the .mp4 container.
-            Although the code I stole is specifically about CSI, this should also work on USB cameras that do hardware encoding.
-            <br><br>
-            So if you've struggled like I have, there's how you do it.
-        </p>
-        <h1>Helpful Commands</h1>
-        <p><i>27/09/2022</i></p>
-        <p>Some helpful Linux commands I'm safekeeping here.</p>
-        <h2>ps -fA | grep "command"</h2>
-        <p>	Reports a snapshot of current processes. Helpful for finding python processes, for example.</p>
-        <h2>scp from.txt pi@ipaddress.local:/to.txt</h2>
-        <p>Copy over SSH.</p>
-        <h2>crontab -e</h2>
-        <p>Avoid doing crontab -r. :(</p>
-        <h2>shrink a disk image</h2>
-        <p>https://askubuntu.com/questions/1174487/re-size-the-img-for-smaller-sd-card-how-to-shrink-a-bootable-sd-card-image</p>
+        <h1>Jan 2026</h1>
+        <p>These photos were taken on Eastman Kodak Aerocolor IV 2460, purchased from Walkens as Aero 100 -- a 100 ISO film. There is substantial light leak, presumably from having to rewind the film a couple times on account of my Pentax P30 skipping frames.</p>
+        <img src="../img/photography/jan26/1.jpg">
+        <p>Kookaburra sits in the persimmon tree.</p>
+        <img src="../img/photography/jan26/2.jpg">
+        <p>A honeyeater joins to chase him.</p>
+        <img src="../img/photography/jan26/3.jpg">
+        <p>The forest will carry on long after we are gone, but this heart engraved into this rock meant the world to someone.</p>
+        <img src="../img/photography/jan26/4.jpg">
+        <p>According to this old lens, it appears as though nothing has changed.</p>
+        <img src="../img/photography/jan26/5.jpg">
+        <p>The scans were only 3620 x 2400. Perhaps with more resolution, the image would give a better sense of scale and depth.</p>
+        <img src="../img/photography/jan26/6.jpg">
+        <p>A light aircraft floats atop the mountain range. On the ground, someone has decided to twice write 'syn' on a sign.</p>
+        <img src="../img/photography/jan26/7.jpg">
+        <p>There is a story behind this boot lid and tyres that I can only ponder. Someone was proud enough to emblazen their car with the Italian flag, but not proud enough not to dump it in a pit.</p>
+        <img src="../img/photography/jan26/8.jpg">
+        <p>A very old lawnmower left in long grass. They must have given up on mowing the mountain.</p>
+        <img src="../img/photography/jan26/9.jpg">
+        <p>This monarch was kind enough to stop by.</p>
+        <img src="../img/photography/jan26/10.jpg">
+        <p>It was something of a challenge to get these photos. I had to balance getting close enough to fill the frame, but not too close so as to disturb the butterfly. The colours are also difficult to distinguish, so using a wide aperture helps to place the subject, but perhaps it was too wide because its right wing was out of focus. There was plenty of light, so I could use a shorter exposure time to account for the movement of the swaying flowers. Moments like these make film photography quite a memorable experience in itself.</p>
+        <img src="../img/photography/jan26/11.jpg">
+        <p>New year's fireworks from the roof of my car. Used bulb for maybe five seconds, can't remember. Weird light leak pattern probably from me man-handling the shutter in a desperate attempt to get the mirror to release.</p>
+        <img src="../img/photography/jan26/12.jpg">
+        <p>'In memory of Guy Chalmers Clift. Resident engineer, Public Works Department, who was in charge of the construction of this dam from its commencement to the day of his death 10th March 1924.'</p>
+        <p>I ponder the love and passion that went into the design and construction of Cordeaux dam. To the right of the plaque, more evidence of lovers making their mark on the world 102 years later.</p>
+        <img src="../img/photography/jan26/13.jpg">
+        <p>I love my car, and my car loves me back.</p>
         <br>
         <hr>
         <footer>
